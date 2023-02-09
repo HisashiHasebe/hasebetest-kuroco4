@@ -1,5 +1,5 @@
 <template>
-  <div>てすと</div>
+  <div>test</div>
   <Tutorial/>
 </template>
 
