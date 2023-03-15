@@ -1,13 +1,13 @@
-name: Build and deploy to Kuroco front(develop)
+name: Build and deploy to Kuroco front(stg)
 on:
   push:
     branches:
-      - develop
+      - stg
   issue_comment:
     types: [created, edited]
   workflow_dispatch:
 env:
-  BASE_URL: ${{secrets.ORIGINAL_BASE_URL}}
+  BASE_URL: ${{secrets.BASE_URL}}
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -26,7 +26,7 @@ jobs:
         with:
           ref: ${{ steps.get_branch.outputs.branch }}
       - name: Copy kuroco_front.json
-        run:  cp static/kuroco_front_dev.json static/kuroco_front.json 
+        run:  cp static/kuroco_front_stg.json static/kuroco_front.json 
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
