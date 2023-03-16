@@ -52,7 +52,7 @@ jobs:
         env:
           webhook_url: "https://hasebetest4-dev.g.kuroco.app/direct/menu/github/"
           webhook_secret: "d878a7b809ee24d52f239487dd2becb4"
-          data: '{"single_zip":"0","domain":"kuroco4.hasebetest.com","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          data: '{"single_zip":"0","domain":"hasebetest4-dev.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -87,4 +87,4 @@ jobs:
         env:
           webhook_url: "https://hasebetest4-dev.g.kuroco.app/direct/menu/github/"
           webhook_secret: "d878a7b809ee24d52f239487dd2becb4"
-          data: '{"single_zip":"0","domain":"kuroco4.hasebetest.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          data: '{"single_zip":"0","domain":"hasebetest4-dev.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
