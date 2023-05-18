@@ -1,4 +1,9 @@
+const environment = process.env.NODE_ENV;
+const envSettings  = require(`./.env.${environment}.js`);
+
 export default {
+  env: envSettings,
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   // Target: https://go.nuxtjs.dev/config-target
@@ -6,7 +11,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'hasebetest-kuroco4',
+    title: envSettings.SITE_TITLE,
     htmlAttrs: {
       lang: 'en'
     },
