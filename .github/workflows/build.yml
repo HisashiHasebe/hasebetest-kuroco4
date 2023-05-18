@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 env:
   BASE_URL: ${{secrets.ORIGINAL_BASE_URL}}
+  NODE_ENV: production
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -32,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build -- --mode production
+        run: npm run build
       - name: Generate
         run: npm run generate
         # - name: Zip artifact for upload
@@ -67,7 +68,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build -- --mode production
+        run: npm run build
       - name: Generate
         run: npm run generate
         # - name: Zip artifact for upload
