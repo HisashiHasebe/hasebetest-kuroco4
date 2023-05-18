@@ -1,5 +1,5 @@
 module.exports = {
-    SITE_TITLE: '[ステージング]|Kurocoサンプルサイト',
+    SITE_TITLE: '[STG]|Kuroco Sample Site',
     META_TITLE: '[ステージング]|Kurocoサンプルサイト',
     SITE_DESCRIPTION: '[ステージング]|Kurocoビギナーズガイドを参考に作成したサンプルサイトです。',
     RSS_SITE_TITLE: '[ステージング]|Kurocoサンプル',
