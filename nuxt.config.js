@@ -1,4 +1,4 @@
-const environment = process.env.NODE_ENV;
+const environment = process.env.NODE_ENV || 'development';
 const envSettings  = require(`./.env.${environment}.js`);
 
 export default {
